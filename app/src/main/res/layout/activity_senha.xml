@@ -10,54 +10,45 @@
     tools:context="paesjuliana.com.br.siap.MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="cursive"
-        android:text="Bem Vindo"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="180dp"
+        android:layout_height="105dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textViewMatricula"
+        android:id="@+id/textViewSenha"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Digite a sua matricula. ex 000123"
+        android:text="Digite a sua senha"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextCodigo"
+        android:id="@+id/editTextSenha"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:maxLength="6"
-        android:inputType="number" />
+        android:inputType="numberPassword" />
 
     <Button
-        android:id="@+id/btnProximo"
+        android:id="@+id/btnEntrar"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/btnarredondado"
-        android:onClick="irParaTelaSenha"
+        android:onClick="irParaTelaPrincipal"
         android:text="Próximo"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/textRelogio"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Padrão"
-        android:textAlignment="center" />
 
 </LinearLayout>

@@ -12,15 +12,14 @@
 
 
     <ImageView
-        android:id="@+id/imageLogo1"
-        android:layout_width="240dp"
-        android:layout_height="135dp"
+        android:id="@+id/imageLogo"
+        android:layout_width="183dp"
+        android:layout_height="105dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="30dp"
-        app:srcCompat="@drawable/logo"
-        android:layout_weight="0.16" />
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView1"
@@ -28,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Bem Vindo"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
 

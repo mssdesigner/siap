@@ -3,7 +3,7 @@ package paesjuliana.com.br.siap;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
-import java.util.StringTokenizer;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,14 +11,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import paesjuliana.com.br.siap.entity.Funcionario;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    Funcionario a = new Funcionario();
 
     DateFormat dateFormat = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
     Calendar dataTime = Calendar.getInstance();
     private TextView txt;
     private EditText txtCodigo;
-    private EditText txtSenha;
 
 
 
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txt = (TextView) findViewById(R.id.textRelogio);
+        a.setCodigo("002202");
 
         updateTextLabel();
     }
@@ -37,23 +41,17 @@ public class MainActivity extends AppCompatActivity {
         txt.setText(dateFormat.format(dataTime.getTime()));
     }
 
-    public void mostrarMensagem(View view){
-        Toast toast = Toast.makeText(this, "Bem Vindo", Toast.LENGTH_LONG);
-        toast.show();
-    }
 
-    public void irParaTelaInicial(View view) {
+    public void irParaTelaSenha(View view) {
 
         txtCodigo = (EditText)findViewById(R.id.editTextCodigo);
-        txtSenha = (EditText)findViewById(R.id.editTextSenha);
 
-        if (txtCodigo.getText().toString().equals("123") && txtSenha.getText().toString().equals("123")) {
+        if (txtCodigo.getText().toString().equals(a.getCodigo())) {
 
-            Intent intencao = new Intent(this, TelaPrincipal.class);
-            startActivity(intencao);
+            startActivity(new Intent(getBaseContext(), TelaSenha.class));
 
         } else {
-            Toast toast = Toast.makeText(this, "Senha Incorreta", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Funcionário não registrado", Toast.LENGTH_SHORT);
             toast.show();
 
         }

@@ -19,7 +19,16 @@
         <activity
             android:name=".TelaPrincipal"
             android:label="@string/title_activity_tela_principal"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".TelaSenha"
+            android:label="@string/title_activity_tela_senha"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
     </application>
 
 </manifest>
