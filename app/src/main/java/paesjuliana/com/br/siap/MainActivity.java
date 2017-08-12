@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     DateFormat dateFormat = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
     Calendar dataTime = Calendar.getInstance();
-    private TextView txt;
+    private TextView txtRelogio;
     private EditText txtCodigo;
 
 
@@ -30,15 +30,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt = (TextView) findViewById(R.id.textRelogio);
-        a.setCodigo("002202");
+        txtRelogio = (TextView) findViewById(R.id.textRelogio);
+        a.setMatricula("002202");
 
         updateTextLabel();
     }
 
     private void updateTextLabel(){
 
-        txt.setText(dateFormat.format(dataTime.getTime()));
+        txtRelogio.setText(dateFormat.format(dataTime.getTime()));
     }
 
 
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
         txtCodigo = (EditText)findViewById(R.id.editTextCodigo);
 
-        if (txtCodigo.getText().toString().equals(a.getCodigo())) {
+        if (txtCodigo.getText().toString().equals(a.getMatricula())) {
 
-            startActivity(new Intent(getBaseContext(), TelaSenha.class));
+            startActivity(new Intent(getBaseContext(), TelaAutentica.class));
 
         } else {
             Toast toast = Toast.makeText(this, "Funcionário não registrado", Toast.LENGTH_SHORT);

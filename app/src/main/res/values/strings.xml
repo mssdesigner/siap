@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Siap</string>
-    <string name="title_activity_tela_senha">tela_senha</string>
+    <string name="title_activity_tela_autentica">tela_autentica</string>
     <string name="title_activity_tela_principal">tela_principal</string>
 </resources>
