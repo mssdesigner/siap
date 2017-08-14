@@ -4,21 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bggradiente"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="paesjuliana.com.br.siap.MainActivity">
+    tools:context="paesjuliana.com.br.siap.MainActivity"
+    android:weightSum="1">
 
 
     <ImageView
         android:id="@+id/imageLogo"
         android:layout_width="180dp"
-        android:layout_height="105dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="50dp"
         app:srcCompat="@drawable/logo" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Olá"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="10pt" />
 
     <TextView
         android:id="@+id/textViewPergunta"
@@ -29,13 +39,37 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editTextPergunta"
+    <LinearLayout
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:maxLength="6"
-        android:inputType="number" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editTextPergunta"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusedByDefault="false"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColorLink="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btnarredondado"
+            android:text="Ok"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/textViewSenha"
@@ -59,13 +93,12 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btnarredondado"
         android:onClick="irParaTelaPrincipal"
         android:text="Próximo"
         android:textColor="@android:color/background_light"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
 
 </LinearLayout>

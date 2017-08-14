@@ -35,24 +35,23 @@ public class TelaAutentica extends AppCompatActivity {
         btnAutentica.setVisibility(View.INVISIBLE);
 
         Random random = new Random();
-        int nAleatorio = random.nextInt(3);
+        int nAleatorio = random.nextInt(4);
 
         if (nAleatorio <= 0){
             txtPergunta.setText("Digite o seus 4 últimos dígitos do cpf");
-            Toast toast = Toast.makeText(this, edtPergunta.getText(), Toast.LENGTH_SHORT);
-            toast.show();
+
 
         } if (nAleatorio == 1){
             txtPergunta.setText("Digite o ano do seu nascimento ex: 1984");
-            Toast toast = Toast.makeText(this, edtPergunta.getText(), Toast.LENGTH_SHORT);
-            toast.show();
 
-        } if (nAleatorio > 1) {
-            txtPergunta.setText("Digite o dia e mes do seu nascimento ex: 2202");
-            Toast toast = Toast.makeText(this, edtPergunta.getText(), Toast.LENGTH_SHORT);
-            toast.show();
+
+        } if (nAleatorio == 2) {
+            txtPergunta.setText("Digite o dia nascimento ex: 22");
+
+        } if (nAleatorio == 3) {
+            txtPergunta.setText("Digite o mes nascimento ex: 01");
+
         }
-
     }
 
     public void irParaTelaPrincipal(View view) {

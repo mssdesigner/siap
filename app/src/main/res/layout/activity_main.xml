@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bggradiente"
     android:gravity="center"
     android:orientation="vertical"
     tools:context="paesjuliana.com.br.siap.MainActivity">
@@ -32,7 +31,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextCodigo"
+        android:id="@+id/editTextMatricula"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -46,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/btnarredondado"
-        android:onClick="irParaTelaSenha"
+        android:onClick="irParaTelaAutentica"
         android:text="Próximo"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"

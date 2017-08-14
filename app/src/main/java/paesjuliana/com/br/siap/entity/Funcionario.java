@@ -1,20 +1,21 @@
 package paesjuliana.com.br.siap.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by MarceloSilva on 08/08/17.
  */
 
-public class Funcionario {
+public class Funcionario implements Serializable {
 
     private String nome;
     private String matricula;
     private String cpf;
-    private Date nascimento;
+    private String nascimento;
     private String senha;
     private String foto;
-    private boolean ativo;
+    private String ativo;
 
     public String getNome() {
         return nome;
@@ -40,11 +41,11 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
-    public Date getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -64,11 +65,13 @@ public class Funcionario {
         this.foto = foto;
     }
 
-    public boolean isAtivo() {
+    public String getAtivo() {
         return ativo;
     }
 
-    public void setAtivo(boolean ativo) {
+    public void setAtivo(String ativo) {
         this.ativo = ativo;
     }
+
+
 }
