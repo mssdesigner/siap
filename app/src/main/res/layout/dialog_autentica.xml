@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="paesjuliana.com.br.siap.MainActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleFoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical|center_horizontal|center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/foto"
+        app:civ_border_color="@android:color/darker_gray"
+        app:civ_border_width="2dp"
+        />
+
+
+    <TextView
+        android:id="@+id/textViewSaudacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewPergunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextResposta"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="4"
+        tools:ignore="LabelFor" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btnarredondado"
+            android:elevation="0dp"
+            android:text="@string/cancelar"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            tools:targetApi="lollipop" />
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btnarredondado"
+            android:text="@string/ok"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

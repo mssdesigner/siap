@@ -2,4 +2,6 @@
     <string name="app_name">Siap</string>
     <string name="title_activity_tela_autentica">tela_autentica</string>
     <string name="title_activity_tela_principal">tela_principal</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="ok">Ok</string>
 </resources>

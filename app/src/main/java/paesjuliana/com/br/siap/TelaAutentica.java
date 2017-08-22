@@ -9,7 +9,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Random;
+
+import paesjuliana.com.br.siap.entity.Funcionario;
 
 public class TelaAutentica extends AppCompatActivity {
 
@@ -17,48 +22,50 @@ public class TelaAutentica extends AppCompatActivity {
     private EditText edtSenha, edtPergunta;
     private TextView txtSenha, txtPergunta;
     private Button btnAutentica;
+    private Funcionario funcionario;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autentica);
+
+        Intent intent = getIntent();
+
+        Bundle info = intent.getExtras();
+
+        funcionario = (Funcionario) info.getSerializable("Funcionario");
+
+        System.out.println(funcionario.getCSENHA());
+
         edtSenha = (EditText) findViewById(R.id.editTextSenha);
         txtSenha = (TextView) findViewById(R.id.textViewSenha);
         btnAutentica = (Button) findViewById(R.id.btnAutentica);
 
-        txtPergunta = (TextView) findViewById(R.id.textViewPergunta);
-        edtPergunta = (EditText) findViewById(R.id.editTextPergunta);
 
-        edtSenha.setVisibility(View.INVISIBLE);
-        txtSenha.setVisibility(View.INVISIBLE);
-        btnAutentica.setVisibility(View.INVISIBLE);
+    }
 
-        Random random = new Random();
-        int nAleatorio = random.nextInt(4);
-
-        if (nAleatorio <= 0){
-            txtPergunta.setText("Digite o seus 4 últimos dígitos do cpf");
-
-
-        } if (nAleatorio == 1){
-            txtPergunta.setText("Digite o ano do seu nascimento ex: 1984");
-
-
-        } if (nAleatorio == 2) {
-            txtPergunta.setText("Digite o dia nascimento ex: 22");
-
-        } if (nAleatorio == 3) {
-            txtPergunta.setText("Digite o mes nascimento ex: 01");
-
+    public String md5 (String senha){
+        String sen = "";
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
+        BigInteger hash = new BigInteger(1, md.digest(senha.getBytes()));
+        sen = hash.toString(16);
+        return sen;
     }
 
     public void irParaTelaPrincipal(View view) {
 
         edtSenha = (EditText)findViewById(R.id.editTextSenha);
 
-        if (edtSenha.getText().toString().equals("002202")) {
+        String senhaBanco = md5(edtSenha.getText().toString());
+
+
+        if (senhaBanco.equals(funcionario.getCSENHA())) {
 
             startActivity(new Intent(getBaseContext(), TelaPrincipal.class));
 

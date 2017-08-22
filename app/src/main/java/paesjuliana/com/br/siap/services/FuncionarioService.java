@@ -13,7 +13,7 @@ import paesjuliana.com.br.siap.entity.Funcionario;
 
 public class FuncionarioService {
 
-    private String caminho = "http://10.10.2.2:8009/rest/AUTENTICA?cmatricula";
+    private String caminho = "http://vittaqualy.net.br:8009/rest/autentica?cMatricula";
 
     public Funcionario getFuncionarioPorMatricula(String matricula) {
         Funcionario funcionario = null;

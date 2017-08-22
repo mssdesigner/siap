@@ -9,69 +9,85 @@ import java.util.Date;
 
 public class Funcionario implements Serializable {
 
-    private String nome;
-    private String matricula;
-    private String cpf;
-    private String nascimento;
-    private String senha;
-    private String foto;
-    private String ativo;
+    private String CNOME;
+    private String CMATFUN;
+    private String CFOTO;
+    private String CDIA;
+    private String CMES;
+    private String CANO;
+    private String CCPF;
+    private String CSITUA;
+    private String CSENHA;
 
-    public String getNome() {
-        return nome;
+    public String getCNOME() {
+        return CNOME;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCNOME(String CNOME) {
+        this.CNOME = CNOME;
     }
 
-    public String getMatricula() {
-        return matricula;
+    public String getCMATFUN() {
+        return CMATFUN;
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+    public void setCMATFUN(String CMATFUN) {
+        this.CMATFUN = CMATFUN;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCFOTO() {
+        return CFOTO;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCFOTO(String CFOTO) {
+        this.CFOTO = CFOTO;
     }
 
-    public String getNascimento() {
-        return nascimento;
+    public String getCDIA() {
+        return CDIA;
     }
 
-    public void setNascimento(String nascimento) {
-        this.nascimento = nascimento;
+    public void setCDIA(String CDIA) {
+        this.CDIA = CDIA;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getCMES() {
+        return CMES;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setCMES(String CMES) {
+        this.CMES = CMES;
     }
 
-    public String getFoto() {
-        return foto;
+    public String getCANO() {
+        return CANO;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setCANO(String CANO) {
+        this.CANO = CANO;
     }
 
-    public String getAtivo() {
-        return ativo;
+    public String getCCPF() {
+        return CCPF;
     }
 
-    public void setAtivo(String ativo) {
-        this.ativo = ativo;
+    public void setCCPF(String CCPF) {
+        this.CCPF = CCPF;
     }
 
+    public String getCSITUA() {
+        return CSITUA;
+    }
 
+    public void setCSITUA(String CSITUA) {
+        this.CSITUA = CSITUA;
+    }
+
+    public String getCSENHA() {
+        return CSENHA;
+    }
+
+    public void setCSENHA(String CSENHA) {
+        this.CSENHA = CSENHA;
+    }
 }
